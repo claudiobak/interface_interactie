@@ -1,71 +1,111 @@
-<!doctype html>
-<html lang="nl">
-	
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>VIDii 2022/23 - Tijdlijn</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-	<header>
-		<h1>De titel van je tijdlijn</h1>
-		<p>Korte omschrijving van je tijdlijn</p>
-	</header>
+  <div class="container">
+    <div class="stage">
+      <header>
+        <h1>Super Mario Timeline</h1>
 
-	<main>
-		<!-- de tijdlijn zelf is een ordered list -->
+        <div id="scoreboard">
+          <p>SCORE: <span id="count">0</span></p>
+        </div>
 
-		<!-- elk list-item is een punt in tijd -->
-		<!-- 11 list-items om te starten -->
-		<!-- bepaal zelf hoeveel je er nodig hebt -->
-		
-		<!-- in elk listitem staat nu een link -->
-		<!-- de link kun je vullen met jouw content -->
-		<!-- of in zijn geheel vervangen door jouw content -->
-		<ol>
-			<li>
-				<a href="#">eerste punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">tweede punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">derde punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">vierde punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">vijde punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">zesde punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">zevende punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">achste punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">negende punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">tiende punt in tijd</a>
-			</li>
-			<li>
-				<a href="#">elfde punt in tijd</a>
-			</li>
-		</ol>
-	</main>
+      </header>
+      <ul id="events"></ul>
 
-	<script src="scripts/script.js"></script>
+      <div class="pipe-container">
+        <div class="pipe">
+          <p>1985</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>1988</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>1990</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>1985</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>1991</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>1996</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <!-- second things -->
+        <div class="pipe">
+          <p>2002</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>2006</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>2007</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+        <div class="pipe">
+          <p>2017</p>
+          <img src="./images/pipe2.png" alt="" srcset="">
+          <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
+        </div>
+
+      </div>
+
+
+      <!-- sprite character -->
+      <button id="myButton">Click me!</button>
+      <button id="myButton2">Move left</button>
+
+      <div class="clouds"></div>
+
+      <!-- <div id="myDiv"></div> -->
+
+      <div class="Character">
+
+        <img class="Character_shadow pixelart"
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacterShadow.png" alt="Shadow" />
+
+        <img class="Character_spritesheet pixelart face-down"
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png" alt="Character" />
+        <!-- sprite character -->
+
+      </div>
+    </div>
+    <!-- </section> -->
+    <div id="ground" class="ground">
+      <div id="grass" class="grass"></div>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
 </body>
-	
+
 </html>
