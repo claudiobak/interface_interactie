@@ -65,7 +65,7 @@ body {
 		margin-top: auto;
 		background-color: brown;
 		background-position: 0px 32px;
-    background-image: url("/images/ground.png");
+    background-image: url("../images/ground.png");
     transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
     
 
@@ -79,7 +79,7 @@ width: 100%;
 height: 32px;
 transition-property: background-position;
 transition-timing-function: ease-in-out;
-background-image: url("/images/grass.png");
+background-image: url("../images/grass.png");
 transition: background-position 0.2s ease-in-out;
 
 }
@@ -327,6 +327,7 @@ transition: background-position 0.2s ease-in-out;
   height: 189px;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .pipe img:nth-of-type(1){
   width: 100px;
@@ -362,6 +363,260 @@ transition: background-position 0.2s ease-in-out;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
 }
+
+/* sub mario */
+.pipe img:nth-of-type(3){
+  /* width: 100px;
+  height: 145px;
+  position: relative;
+  z-index: -1; */
+  width: 100px;
+  height: 145px;
+  position: absolute;
+    /* position: relative; */
+
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(32%);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+
+
+}
+
+/* article in pipe */
+.pipe article {
+  max-width: 28em;
+  width: 28em;
+  background-color: white;
+  color: black;
+  padding: 1em;
+  position: relative;
+  font-size: 12px;
+  margin-left: 10em;
+  transition: .3s ease;
+}
+
+/* .pipe article:nth-of-type(6),
+.pipe article:nth-of-type(6){
+  max-width: 28em;
+  width: 28em;
+  background-color: rgb(255, 87, 87);
+  color: black;
+  padding: 1em;
+  position: relative;
+  font-size: 12px;
+  margin-left: 10em;
+  transition: .3s ease;
+
+} */
+
+/* .pipe:nth-last-child(-n+2) article {
+  float: left;
+} */
+
+.pipe article p{
+  margin: 0;
+  margin-top: 2em;
+}
+/* .pipe article p,
+.pipe article h2
+{
+  margin: 1em;
+
+} */
+
+.infoUp{
+  transform: translateY(-233%);
+  /* display: block; */
+
+}
+
+.close{
+  font-size: 2em;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:.5em .3em;
+}
+
+/* .pipe article .infoUp{
+  font-size: 1em;
+} */
+
+/* .marioUp{
+  transform: translateY(-93%);
+
+} */
+
+
+/* pixelate borders! */
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 20px),
+    4px calc(100% - 20px),
+    4px calc(100% - 12px),
+    8px calc(100% - 12px),
+    8px calc(100% - 8px),
+    12px calc(100% - 8px),
+    12px calc(100% - 4px),
+    20px calc(100% - 4px),
+    20px 100%,
+    calc(100% - 20px) 100%,
+    calc(100% - 20px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 20px),
+    100% calc(100% - 20px),
+    100% 20px,
+    calc(100% - 4px) 20px,
+    calc(100% - 4px) 12px,
+    calc(100% - 8px) 12px,
+    calc(100% - 8px) 8px,
+    calc(100% - 12px) 8px,
+    calc(100% - 12px) 4px,
+    calc(100% - 20px) 4px,
+    calc(100% - 20px) 0px,
+    20px 0px,
+    20px 4px,
+    12px 4px,
+    12px 8px,
+    8px 8px,
+    8px 12px,
+    4px 12px,
+    4px 20px,
+    0px 20px);
+  position: relative;
+}
+.pixel-corners {
+  border: 4px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(4px 20px,
+    8px 20px,
+    8px 12px,
+    12px 12px,
+    12px 8px,
+    20px 8px,
+    20px 4px,
+    calc(100% - 20px) 4px,
+    calc(100% - 20px) 8px,
+    calc(100% - 12px) 8px,
+    calc(100% - 12px) 12px,
+    calc(100% - 8px) 12px,
+    calc(100% - 8px) 20px,
+    calc(100% - 4px) 20px,
+    calc(100% - 4px) calc(100% - 20px),
+    calc(100% - 8px) calc(100% - 20px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 20px) calc(100% - 8px),
+    calc(100% - 20px) calc(100% - 4px),
+    20px calc(100% - 4px),
+    20px calc(100% - 8px),
+    12px calc(100% - 8px),
+    12px calc(100% - 12px),
+    8px calc(100% - 12px),
+    8px calc(100% - 20px),
+    4px calc(100% - 20px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 20px),
+    4px calc(100% - 20px),
+    4px calc(100% - 12px),
+    8px calc(100% - 12px),
+    8px calc(100% - 8px),
+    12px calc(100% - 8px),
+    12px calc(100% - 4px),
+    20px calc(100% - 4px),
+    20px 100%,
+    calc(100% - 20px) 100%,
+    calc(100% - 20px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 4px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 12px),
+    calc(100% - 4px) calc(100% - 20px),
+    100% calc(100% - 20px),
+    100% 20px,
+    calc(100% - 4px) 20px,
+    calc(100% - 4px) 12px,
+    calc(100% - 8px) 12px,
+    calc(100% - 8px) 8px,
+    calc(100% - 12px) 8px,
+    calc(100% - 12px) 4px,
+    calc(100% - 20px) 4px,
+    calc(100% - 20px) 0px,
+    20px 0px,
+    20px 4px,
+    12px 4px,
+    12px 8px,
+    8px 8px,
+    8px 12px,
+    4px 12px,
+    4px 20px,
+    0px 20px,
+    0px 50%,
+    4px 50%,
+    4px 20px,
+    8px 20px,
+    8px 12px,
+    12px 12px,
+    12px 8px,
+    20px 8px,
+    20px 4px,
+    calc(100% - 20px) 4px,
+    calc(100% - 20px) 8px,
+    calc(100% - 12px) 8px,
+    calc(100% - 12px) 12px,
+    calc(100% - 8px) 12px,
+    calc(100% - 8px) 20px,
+    calc(100% - 4px) 20px,
+    calc(100% - 4px) calc(100% - 20px),
+    calc(100% - 8px) calc(100% - 20px),
+    calc(100% - 8px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 8px),
+    calc(100% - 20px) calc(100% - 8px),
+    calc(100% - 20px) calc(100% - 4px),
+    20px calc(100% - 4px),
+    20px calc(100% - 8px),
+    12px calc(100% - 8px),
+    12px calc(100% - 12px),
+    8px calc(100% - 12px),
+    8px calc(100% - 20px),
+    4px calc(100% - 20px),
+    4px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: -4px;
+}
+
+/* source from generator: */
+/* https://pixelcorners.lukeb.co.uk/?radius=8&multiplier=4&border=1&border_width=1&border_color=#000000 */
 
 /* //////////////////////////////////////////// */
 /* good code */
@@ -430,6 +685,10 @@ transition: background-position 0.2s ease-in-out;
   position: relative;
 }
 
+
+/* sub mario */
+
+
 /* .pipe img {
   width: 100px;
   height: 145px;
@@ -455,7 +714,7 @@ transition: background-position 0.2s ease-in-out;
   animation: cloudsMove 60s linear infinite; */
 
 
-  background-image: url("/images/realclouds2.png");
+  background-image: url("../images/realclouds2.png");
   /* background-size: cover; */
   background-size: auto 100%;
   background-position: right;
@@ -495,4 +754,13 @@ transition: background-position 0.2s ease-in-out;
   background-repeat: repeat-x;
   background-position: center bottom;
 
+}
+
+
+.img_clicked{
+  transform: translateY(-96%);
+}
+
+img.sub-mario_img.img_clicked{
+  transform: translateY(-96%);
 }

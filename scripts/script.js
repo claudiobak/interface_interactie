@@ -19,8 +19,8 @@ myButton.addEventListener("click", () => {
     myDiv.classList.remove("face-right");
   }, 500);
 
-  if (currentPosition <= -1000) {
-    currentPosition = -1000;
+  if (currentPosition <= -1500) {
+    currentPosition = -1500;
   } else {
     currentPosition += moveDistance;
   }
@@ -61,29 +61,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-
-
-// get all the plant images
-const plants = document.querySelectorAll('.pipe img:nth-of-type(2)');
-
-// define a function to add and remove the class randomly
-function movePlant() {
-  // randomly select a plant index
-  const randomIndex = Math.floor(Math.random() * plants.length);
-
-  // add the class to the randomly selected plant
-  plants[randomIndex].classList.add('plantsUp');
-
-  // remove the class from the randomly selected plant after 3 seconds
-  setTimeout(() => {
-    plants[randomIndex].classList.remove('plantsUp');
-  }, 1000);
-}
-
-// call the function repeatedly with setInterval()
-setInterval(movePlant, 5000);
-
-
 // /////////////////////////////
 // score counter
 
@@ -115,3 +92,67 @@ setInterval(movePlant, 5000);
       for (let i = 0; i < plantImgs.length; i++) {
         plantImgs[i].addEventListener('click', updateCount);
       }
+
+
+const plants = document.querySelectorAll('.pipe img:nth-of-type(2)');
+
+// define a function to add and remove the class randomly
+function movePlant() {
+  // randomly select a plant index
+  const randomIndex = Math.floor(Math.random() * plants.length);
+  // add the class to the randomly selected plant
+  plants[randomIndex].classList.add('plantsUp');
+  // remove the class from the randomly selected plant after 3 seconds
+  setTimeout(() => {
+    plants[randomIndex].classList.remove('plantsUp');
+  }, 1000);
+}
+
+// call the function repeatedly with setInterval()
+let movePlantInterval = setInterval(movePlant, 5000);
+
+const pipes = document.querySelectorAll(".pipe");
+
+pipes.forEach(pipe => {
+  // Add event listener to the first image inside the .pipe element
+  pipe.querySelector("img:first-of-type").addEventListener('click', event => {
+    event.stopPropagation(); // Stop event propagation to the .pipe element
+    const img1 = event.target.closest(".pipe").querySelector(".sub-mario_img");
+    const marioInfo = event.target.closest(".pipe").querySelector("article");
+
+    // Check if the target pipe already has the img_clicked class
+    if (img1.classList.contains("img_clicked")) {
+      // Remove the classes from the target pipe
+      img1.classList.remove("img_clicked");
+      marioInfo.classList.remove("infoUp");
+
+      // Resume the movement of the plant images
+      movePlantInterval = setInterval(movePlant, 5000);
+    } else {
+      // Remove the classes from any other pipe that has them
+      pipes.forEach(p => {
+        p.querySelector(".sub-mario_img").classList.remove("img_clicked");
+        p.querySelector("article").classList.remove("infoUp");
+      });
+
+      // Add the classes to the target pipe
+      img1.classList.add("img_clicked");
+      marioInfo.classList.add("infoUp");
+
+      // Stop the movement of the plant images
+      clearInterval(movePlantInterval);
+    }
+  });
+});
+
+const closeBtn = document.querySelector(".close");
+
+closeBtn.addEventListener("click", function() {
+  const img1 = document.querySelector(".img_clicked");
+  const marioInfo = document.querySelector(".infoUp");
+  img1.classList.remove("img_clicked");
+  marioInfo.classList.remove("infoUp");
+
+  // Resume the movement of the plant images
+  movePlantInterval = setInterval(movePlant, 5000);
+});
