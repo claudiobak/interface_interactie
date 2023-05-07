@@ -13,21 +13,21 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="stage">
+  <main>
+  <section class="container">
+    <section class="stage">
       <header>
         <h1>Super Mario Timeline</h1>
 
-        <div id="scoreboard">
+        <section id="scoreboard">
           <p>SCORE: <span id="count">0</span></p>
-        </div>
+        </section>
 
       </header>
       <ul id="events"></ul>
 
-      <!-- new -->
-      <div class="pipe-container">
-        <div class="pipe" data-modal="modal1">
+      <section class="pipe-container">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -39,9 +39,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal2">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -54,9 +54,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal3">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -68,9 +68,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal4">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -82,9 +82,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal5">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -97,9 +97,9 @@
             </p>
           </article>
 
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal6">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -111,9 +111,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal7">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -125,9 +125,9 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
-        <div class="pipe" data-modal="modal8">
+        <section class="pipe">
           <p>1985</p>
           <img src="./images/pipe2.png" alt="" srcset="">
           <img class="plant_img" src="./images/plant1.png" alt="" srcset="">
@@ -140,18 +140,21 @@
               graphic quality avalaible at the time.
             </p>
           </article>
-        </div>
+        </section>
 
         <!-- Repeat for all pipe elements -->
 
-      </div>
+      </section>
 
 
 
 
       <!-- sprite character -->
-      <button id="myButton">Click me!</button>
-      <button id="myButton2">Move left</button>
+      <section class="button-container">
+        <button id="myButton2"><img src="./images/arrowkey-left.png" alt="">LEFT</button>
+        <button id="myButton">RIGHT <img src="./images/arrowkey-left.png" alt=""></button>
+      </section>
+
 
       <div class="clouds"></div>
 
@@ -163,16 +166,16 @@
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacterShadow.png" alt="Shadow" />
 
         <img class="Character_spritesheet pixelart face-down"
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png" alt="Character" />
+          src="./images/mariocharacter2.png" alt="Character" />
         <!-- sprite character -->
 
       </div>
-    </div>
+    </section>
     <!-- </section> -->
-    <div id="ground" class="ground">
-      <div id="grass" class="grass"></div>
-    </div>
-  </div>
+    <section id="ground" class="ground">
+      <section id="grass" class="grass"></section>
+    </section>
+  </main>
   <script src="scripts/script.js"></script>
   <script src="scripts/script2.js"></script>
 

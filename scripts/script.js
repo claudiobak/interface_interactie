@@ -1,4 +1,3 @@
-
 const myButton = document.getElementById("myButton");
 const myDiv = document.querySelector(".Character img:nth-of-type(2)");
 const pipeContainer = document.querySelector(".pipe-container");
@@ -94,6 +93,7 @@ document.addEventListener("keydown", (event) => {
       }
 
 
+
 const plants = document.querySelectorAll('.pipe img:nth-of-type(2)');
 
 // define a function to add and remove the class randomly
@@ -145,14 +145,33 @@ pipes.forEach(pipe => {
   });
 });
 
-const closeBtn = document.querySelector(".close");
 
-closeBtn.addEventListener("click", function() {
-  const img1 = document.querySelector(".img_clicked");
-  const marioInfo = document.querySelector(".infoUp");
+
+// Check if there is an image with the img_clicked class
+const img1 = document.querySelector(".img_clicked");
+if (img1) {
+  // Remove the classes from the image and the info box
+  const marioInfo = img1.closest(".pipe").querySelector("article");
   img1.classList.remove("img_clicked");
   marioInfo.classList.remove("infoUp");
 
+  // Toggle the classes on the pipe element
+  const pipe = img1.closest(".pipe");
+  pipe.classList.toggle("img_clicked");
+  pipe.querySelector("article").classList.toggle("infoUp");
+
   // Resume the movement of the plant images
   movePlantInterval = setInterval(movePlant, 5000);
+}
+
+const closeButtons = document.querySelectorAll('span.close');
+
+closeButtons.forEach(close => {
+  close.addEventListener('click', () => {
+    const img1 = document.querySelector(".img_clicked");
+    const marioInfo = img1.closest(".pipe").querySelector("article");
+
+    img1.classList.toggle('img_clicked');
+    marioInfo.classList.toggle('infoUp');
+  });
 });

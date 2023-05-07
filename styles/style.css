@@ -1,11 +1,13 @@
 :root {
   --pixel-size: 6;
   --main-font:'Press Start 2P', cursive;
-}
 
-/* html{
-  max-height: 100vh;
-} */
+  --sky-color: #6FDCFF;
+  --ground-color: brown;
+  --article-color: white;
+  --article-text-color: rgb(99, 109, 183);
+  --article-border-color: black;
+}
 
 html,
 body {
@@ -22,23 +24,13 @@ body {
   padding:0;
 }
 
-/* h1{
-  padding: 1em;
-  position: absolute
-} */
-
-/* body{
-  margin: 0;
-} */
 
 .container {
 	box-sizing: border-box;
 	height: 100vh;
-/*   height: auto; */
 	display: flex;
 	flex-direction: column;
-  background-color: #6FDCFF;
-/*     position: relative; */
+  background-color: var(--sky-color);
 }
 
 .container .stage {
@@ -47,160 +39,97 @@ body {
 }
 
 .header{
-    background-color: #6FDCFF;
-
+    background-color: var(--sky-color);
 }
 
 .ground {
-  /* position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30vh;
-	background-image: url("/images/ground.png"); */
   position: relative;
-		flex: 0 0 30vh;
-		transition: background-position;
-		transition-timing-function: ease-in-out;
-		margin-top: auto;
-		background-color: brown;
-		background-position: 0px 32px;
-    background-image: url("../images/ground.png");
-    transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
-    
-
-  }
-  
-.grass {
-position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-height: 32px;
-transition-property: background-position;
-transition-timing-function: ease-in-out;
-background-image: url("../images/grass.png");
-transition: background-position 0.2s ease-in-out;
-
+	flex: 0 0 30vh;
+	transition: background-position;
+	transition-timing-function: ease-in-out;
+	margin-top: auto;
+	background-color: var(--ground-color);
+	background-position: 0px 32px;
+  background-image: url("../images/ground.png");
+  transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
 }
-/* tubes  */
-/*   #tubes{
-    list-style:none;
-  } */
+
+.grass {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 32px;
+  transition-property: background-position;
+  transition-timing-function: ease-in-out;
+  background-image: url("../images/grass.png");
+  transition: background-position 0.2s ease-in-out;
+}
+
 .ground2{
   position:relative;
   bottom: 0;
   justify-content:center;
 }
-    .blocks {
-        position: absolute;
-        bottom: 0;
-/*         width: 100%; */
-      min-width: 5em;
-        height: 50px;
-        display: flex;
-/*         justify-content: space-between; */
-      gap: 2em;
-      list-style:none;
-    }
-    .block {
-        width: 40px;
-        height: 40px;
-        background-color: gray;
-    }
+
+.blocks {
+  position: absolute;
+  bottom: 0;
+  min-width: 5em;
+  height: 50px;
+  display: flex;
+  gap: 2em;
+  list-style:none;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+}
 
 
 /* sprite character */
-
-/* .Character {
-  width: calc(32px * var(--pixel-size));
-  height: calc(32px * var(--pixel-size));
-  overflow: hidden;
-  position: relative;
-  margin: 4em auto;
-}
-
-.Character_spritesheet {
-  animation: moveSpritesheet 1s steps(4) infinite;
-  width: calc(128px * var(--pixel-size));
-  position: absolute;
-  
-}
-.Character_shadow {
-  position: absolute;
-  width: calc(32px * var(--pixel-size));
-  height: calc(32px * var(--pixel-size));
-}
-
-.pixelart {
-  image-rendering: pixelated;
-}
-
-.face-right {
-  top: calc(-32px * var(--pixel-size));
-}
-.face-up {
-  top: calc(-64px * var(--pixel-size));
-}
-.face-left {
-  top: calc(-96px * var(--pixel-size));
-}
-
-
-@keyframes moveSpritesheet {
-  from {
-     transform: translate3d(0px,0,0)
-  }
-  to {
-     transform: translate3d(-100%,0,0)
-  }
-} */
 
 .Character {
   width: calc(32px * var(--pixel-size));
   height: calc(32px * var(--pixel-size));
   overflow: hidden;
-
   z-index: 1000;
-  /* margin: auto;
-  
-
-
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 26vh; */
-
   position: absolute;
-	/* width: 32px; */
-	/* height: 48px; */
 	left: 50%;
 	bottom: -1em;
 	transform: translateX(-50%);
 	animation-fill-mode: forwards;
-
 }
+
 .Character_spritesheet {
   animation: moveSpritesheet 1s steps(4) infinite;
   width: calc(128px * var(--pixel-size));
   position: absolute;
 }
+
 .Character_shadow {
   position: absolute;
   width: calc(32px * var(--pixel-size));
   height: calc(32px * var(--pixel-size));
 }
+
 .pixelart {
   image-rendering: pixelated;
 }
+
 .face-right {
   top: calc(-32px * var(--pixel-size));
 }
+
 .face-up {
   top: calc(-64px * var(--pixel-size));
 }
+
 .face-left {
   top: calc(-96px * var(--pixel-size));
 }
+
 @keyframes moveSpritesheet {
   from {
     transform: translate3d(0px, 0, 0);
@@ -212,115 +141,87 @@ transition: background-position 0.2s ease-in-out;
 
 /*///// pipes ///// */
 
-/* .event {
-  position: relative;
-  flex: 0 0 50px;
-  width: 50px;
-  height: 48px;
-  margin-left: 100px;
-  cursor: pointer;
-  background-color: green;
-  background-image: url("/images/pipe.png");
-  background-size: 100%;
-}
-
-#events {
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  left: 50vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-} */
-
 
 /* button */
+.button-container{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10000;
+  flex-direction: row;
+}
+
 #myButton{
-  background-color: #6FDCFF;
+  display: inline-block;
+
+  background-color: #000000b8;
+  font-family: var(--main-font);
+  border-radius: .5em;
+  border: none;
+  padding: 1em;
+  color: var(--article-color);
   z-index: 10000;
-  position: absolute;
+  /* position: fixed; */
+
+  bottom: 0;
   margin: 2em;
+  top: 80%;
+  left: 50%;
+  cursor: pointer;
+  /* transform: translate(-50%, -50%) */
+  display: flex;
+  align-items: center;
 }
+
+#myButton img {
+  max-width: 2em;
+  filter: invert(1);
+  margin-left: 1em;
+}
+
+#myButton2 img {
+  max-width: 2em;
+  filter: invert(1);
+  transform: rotate(180deg);
+  margin-right: 1em;
+}
+
 #myButton2{
-  background-color: #6FDCFF;
+  display: inline-block;
+  border: none;
+
+  background-color: #000000b8;
+  font-family: var(--main-font);
+  color: var(--article-color);
+  border-radius: .5em;
+  padding: 1em;
+  margin: 2em;
+
   z-index: 10000;
-  position: absolute;
-  margin: 4em;
+  bottom: 0;
+  top: 80%;
+  left: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+
 }
-
-
-
-.tubecontainer {
-  position: relative;
-  height: 32px;
-  margin-top: -32px;
-}
-
-
-
-.tube {
-  position: absolute;
-  top: 30%;
-  right: -50px;
-  width: 50px;
-  height: 200px;
-  background-color: green;
-  transition: left 1s linear;
-}
-
 
 .pipe-container {
   display: flex;
   justify-content: space-between;
-  /* width: 800px;  */
-
-  /* position: relative; */
   position: absolute;
-  /* width: 900px;  */
   width: 1200px;
-
 	left: 50%;
-  /* right: 50%; */
 	bottom: 0;
 	transform: translateX(100%);
-  /* transition-timing-function: ease-in-out; */
   transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
-
-
-
-
-  
 }
 
-/* .pipe {
-
-  width: 100px;
-  height: 145px;
-
-  background-image: url("/images/pipe2.png");
-  background-size: 100%;
-  background-size: cover;
-
-
-  z-index:1;
-  position: relative;
-}
-
-
-.pipe::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/plant1.png");
-  background-size: cover;
-  z-index: -1;
-} */
 
 .pipe {
   width: 100px;
@@ -336,15 +237,9 @@ transition: background-position 0.2s ease-in-out;
   z-index: 1;
 }
 .pipe img:nth-of-type(2){
-  /* width: 100px;
-  height: 145px;
-  position: relative;
-  z-index: -1; */
   width: 100px;
   height: 145px;
   position: absolute;
-    /* position: relative; */
-
   top: 0;
   left: 0;
   z-index: -1;
@@ -355,9 +250,6 @@ transition: background-position 0.2s ease-in-out;
 
 }
 
-/* .plantsUp {
-  transform: translateY(-150%);
-} */
 
 .pipe img:nth-of-type(2).plantsUp {
   transform: translateY(-50%);
@@ -366,15 +258,10 @@ transition: background-position 0.2s ease-in-out;
 
 /* sub mario */
 .pipe img:nth-of-type(3){
-  /* width: 100px;
-  height: 145px;
-  position: relative;
-  z-index: -1; */
+
   width: 100px;
   height: 145px;
   position: absolute;
-    /* position: relative; */
-
   top: 0;
   left: 0;
   z-index: -1;
@@ -389,8 +276,8 @@ transition: background-position 0.2s ease-in-out;
 .pipe article {
   max-width: 28em;
   width: 28em;
-  background-color: white;
-  color: black;
+  background-color: var(--article-color);
+  /* color: black; */
   padding: 1em;
   position: relative;
   font-size: 12px;
@@ -398,39 +285,15 @@ transition: background-position 0.2s ease-in-out;
   transition: .3s ease;
 }
 
-/* .pipe article:nth-of-type(6),
-.pipe article:nth-of-type(6){
-  max-width: 28em;
-  width: 28em;
-  background-color: rgb(255, 87, 87);
-  color: black;
-  padding: 1em;
-  position: relative;
-  font-size: 12px;
-  margin-left: 10em;
-  transition: .3s ease;
-
-} */
-
-/* .pipe:nth-last-child(-n+2) article {
-  float: left;
-} */
 
 .pipe article p{
   margin: 0;
   margin-top: 2em;
 }
-/* .pipe article p,
-.pipe article h2
-{
-  margin: 1em;
 
-} */
 
 .infoUp{
   transform: translateY(-233%);
-  /* display: block; */
-
 }
 
 .close{
@@ -441,15 +304,6 @@ transition: background-position 0.2s ease-in-out;
   right: 0;
   padding:.5em .3em;
 }
-
-/* .pipe article .infoUp{
-  font-size: 1em;
-} */
-
-/* .marioUp{
-  transform: translateY(-93%);
-
-} */
 
 
 /* pixelate borders! */
@@ -607,7 +461,7 @@ transition: background-position 0.2s ease-in-out;
   bottom: 0;
   left: 0;
   right: 0;
-  background: black;
+  background: var(--article-border-color);
   display: block;
   pointer-events: none;
 }
@@ -618,52 +472,6 @@ transition: background-position 0.2s ease-in-out;
 /* source from generator: */
 /* https://pixelcorners.lukeb.co.uk/?radius=8&multiplier=4&border=1&border_width=1&border_color=#000000 */
 
-/* //////////////////////////////////////////// */
-/* good code */
-/* .pipe {
-  width: 100px;
-  height: 145px;
-  background-image: url("/images/pipe2.png");
-  background-size: 100%;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
-
-.pipe::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/plant1.png");
-  background-size: cover;
-  z-index: -1;
-} */
-/* good code */
-/* //////////////////////////////////////////// */
-
-
-
-/* .pipe::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: -1;
-  background-image: url("/images/plant1.png");
-  background-size: cover;
-
-
-  animation-name: moveUpDown;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-} */
 
 @keyframes moveUpDown {
   0% {
@@ -678,7 +486,7 @@ transition: background-position 0.2s ease-in-out;
 }
 
 .pipe p{
-  color: rgb(99, 109, 183);
+  color: var(--article-text-color);
   margin: 1em;
   transform: translateY(-10%);
   z-index: -5;
@@ -686,47 +494,17 @@ transition: background-position 0.2s ease-in-out;
 }
 
 
-/* sub mario */
-
-
-/* .pipe img {
-  width: 100px;
-  height: 145px;
-  z-index: 1;
-  position: absolute;
-} */
-/* .pipe {
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  margin-right: 150px;
-} */
 
 
 /* clouds */
 .clouds {
-  /* width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  background-image: url('/images/realclouds.png');
-  animation: cloudsMove 60s linear infinite; */
-
-
   background-image: url("../images/realclouds2.png");
-  /* background-size: cover; */
   background-size: auto 100%;
   background-position: right;
-  /* background-repeat: no-repeat; */
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* transform: scaleY(.7); */
-  /* padding-bottom: 10em; */
-  /* height: 62%; */
   z-index: -1;
   animation: cloudsMove linear 130s infinite;
 }
@@ -743,17 +521,16 @@ transition: background-position 0.2s ease-in-out;
 
 /* scoreboard */
       /* Hide the scoreboard initially */
-      #scoreboard {
-        display: none;
-        position: absolute;
-      }
+#scoreboard {
+  display: none;
+  position: absolute;
+}
 
 
 .stage {
   background-image: url("../images/mountainpng5.png");
   background-repeat: repeat-x;
   background-position: center bottom;
-
 }
 
 
