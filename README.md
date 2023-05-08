@@ -34,7 +34,7 @@ Mijn startniveau is: Rood
   Aan deze technieken/punten wil ik werken:
   - Animaties door middel van CSS
   - Positionering door middel van CSS
-  - Interactie door middel van Jvascript
+  - Interactie door middel van Javascript
  
 </details>
 
@@ -57,12 +57,11 @@ Mijn startniveau is: Rood
 
   ### Bevinding 2:
   Ik ben begonnen met de basis van mijn concept uit te werken in codepen. Ik wilde eerst beginnen met het correct positioneren van de character en de buizen op de grond.
-  <img src="readme-images/readme_img2.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img5.png" width="375px" alt="eerste versie in codepen">
 
 
   #### oplossing:
   Ik ga al mijn code verder uitwerken in Visual Studio Code, en vervolgens flexbox en wellicht grid toepassen om zo alle elementen op de juiste manier te positioneren.
-
 
 
 
@@ -71,6 +70,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga door middel van Javascript en CSS proberen de achtergrond te laten bewegen om zo de illusie te creeëren dat de gebruiker naar links of naar rechts kan lopen. Door een eventlistener op de arrow keys te zetten wil ik de achtergrond met transform translate Y een gegeven aantal pixels naar links of naar rechts laten bewegen terwijl de character in het midden van het scherm blijft staan.
+  <img src="readme-images/readme_img6.png" width="375px" alt="JS code for arrowkeys movement">
 
 
   ### Bevinding 4:
