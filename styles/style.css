@@ -13,6 +13,9 @@
   --article-text-color: rgb(99, 109, 183);
   --article-border-color: black;
   --transparant-bg: #000000b8;
+  --color-disabled-btn-1: #999999;
+  --color-disabled-btn-2: #cccccc ;
+  --color-disabled-btn-3: #666666;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -240,9 +243,9 @@ header h1 {
 .container > section:first-child > section:nth-of-type(2) button:nth-of-type(2):disabled,
 .container > section:first-child > section:nth-of-type(2) button:nth-of-type(1)[disabled]   
 {  
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+  border: 1px solid var(--color-disabled-btn-1);
+  background-color: var(--color-disabled-btn-2);
+  color: var(--color-disabled-btn-3);
   transition: .2s ease;
 }
 
