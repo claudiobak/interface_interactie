@@ -221,7 +221,7 @@ Mijn startniveau is: Rood
   ### Dit ging goed/Heb ik geleerd: 
   Ik ben mij verder gaan verdiepen in HTML en CSS, ik begrijp nu beter hoe je in plaats van classes en ID's ook CSS selectors kan gebruiken. Verder heb ik door middel van Javascript de website heel interactief gemaakt, ik wilde graag dat de gebruiker heen en weer kon lopen net als in een echte mario game en dit is dan ook gelukt. Soms liep ik een beetje vast op de Javascript maar gelukkig ben ik er uiteindelijk toch uitgekomen en is alles naar mijn wens verlopen.
 
-  <img src="readme-images/selectorscss.png" width="375px" alt="top">
+  <img src="readme-images/selectorscss_img.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
