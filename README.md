@@ -28,7 +28,7 @@ Mijn startniveau is: Rood
   ### De eerste versie/schets:
   <!-- <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets"> -->
   Mijn plan is om een tijdlijn te maken over Mario. De user kan naar links en rechts bewegen met de Mario character om zo langs de buizen te lopen. Vervolgens kan de user op de buizen klikken en komt er een Mario uit de buis die uit dat specifieke jaartal komt.
-  
+
   <img src="readme-images/readme_img1.png" width="375px" alt="eerste versie/schets">
 
   ### Je ambitie: 
@@ -93,7 +93,7 @@ Mijn startniveau is: Rood
   #### oplossing:
   Ik ga meerdere states toevoegen aan de buttons zodat deze nog semantischer worden.
 
-  <img src="readme-images/readme_img3.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/buttonstaes_img.png" width="375px" alt="eerste versie/schets">
 
 
 </details>
