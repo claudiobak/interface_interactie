@@ -1,12 +1,31 @@
+/* //////////////// */
+/* GENERAL STYLING */
+/* ///////////////*/
 :root {
   --pixel-size: 6;
   --main-font:'Press Start 2P', cursive;
 
   --sky-color: #6FDCFF;
+  --text-color-title: black;
+  --text-color-button: rgb(255, 255, 255);
   --ground-color: brown;
   --article-color: white;
   --article-text-color: rgb(99, 109, 183);
   --article-border-color: black;
+  --transparant-bg: #000000b8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sky-color: #322a61;
+    --text-color-title: rgb(255, 255, 255);
+    --text-color-light: white;
+    --ground-color: brown;
+    --article-color: rgb(59, 59, 59);
+    --article-text-color: rgb(216, 221, 255);
+    --article-border-color: rgb(216, 221, 255);
+    --transparant-bg: #000000b8;
+  }
 }
 
 html,
@@ -18,12 +37,21 @@ body {
   font-family: var(--main-font);
 }
 
+/* CSS RESET */
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
+
+
+
+
+
+/* /////////////////////// */
+/* MAIN CONTENT CONTAINER */
+/* //////////////////////*/
 
 .container {
 	box-sizing: border-box;
@@ -33,16 +61,20 @@ body {
   background-color: var(--sky-color);
 }
 
-.container .stage {
+.container > section:first-child {
+  background-image: url("../images/mountainpng5.png");
+  background-repeat: repeat-x;
+  background-position: center bottom;
   position: relative;
   flex: 1;
 }
 
-.header{
-    background-color: var(--sky-color);
+header h1 {
+  margin: 1em;
+  color: var(--article-border-color);
 }
 
-.ground {
+.container > :nth-child(2n){
   position: relative;
 	flex: 0 0 30vh;
 	transition: background-position;
@@ -54,7 +86,8 @@ body {
   transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
 }
 
-.grass {
+/* grass */
+.container > :nth-child(2n) > section{
   position: absolute;
   left: 0;
   top: 0;
@@ -66,29 +99,17 @@ body {
   transition: background-position 0.2s ease-in-out;
 }
 
-.ground2{
-  position:relative;
-  bottom: 0;
-  justify-content:center;
-}
-
-.blocks {
-  position: absolute;
-  bottom: 0;
-  min-width: 5em;
-  height: 50px;
-  display: flex;
-  gap: 2em;
-  list-style:none;
-}
-
-.block {
-  width: 40px;
-  height: 40px;
-}
 
 
-/* sprite character */
+
+
+
+
+/* /////////////////////// */
+/* SPRITE CHARACTER       */
+/* //////////////////////*/
+
+/* source code: https://www.youtube.com/watch?v=ekI7vjkFrGA&t=1173s&ab_channel=DrewConley */
 
 .Character {
   width: calc(32px * var(--pixel-size));
@@ -139,11 +160,17 @@ body {
  }
 }
 
-/*///// pipes ///// */
 
 
-/* button */
-.button-container{
+
+
+
+/* /////////////////////// */
+/* BUTTONS                */
+/* //////////////////////*/
+
+/* button container*/
+.container > section:first-child > section:nth-of-type(2) {  
   display: flex;
   justify-content: center;
   position: fixed;
@@ -153,65 +180,100 @@ body {
   flex-direction: row;
 }
 
-#myButton{
+/* button right */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(2) {  
   display: inline-block;
-
-  background-color: #000000b8;
+  background-color: var(--transparant-bg);
   font-family: var(--main-font);
   border-radius: .5em;
   border: none;
   padding: 1em;
-  color: var(--article-color);
+  color: var(--text-color-button);
   z-index: 10000;
-  /* position: fixed; */
-
   bottom: 0;
   margin: 2em;
   top: 80%;
   left: 50%;
   cursor: pointer;
-  /* transform: translate(-50%, -50%) */
   display: flex;
   align-items: center;
+  transition: .3s ease;
 }
 
-#myButton img {
+/* button img */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(2) img {  
   max-width: 2em;
   filter: invert(1);
   margin-left: 1em;
 }
 
-#myButton2 img {
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(1) img {  
   max-width: 2em;
   filter: invert(1);
   transform: rotate(180deg);
   margin-right: 1em;
 }
 
-#myButton2{
+/* left button */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(1) {  
   display: inline-block;
   border: none;
-
-  background-color: #000000b8;
+  background-color: var(--transparant-bg);
   font-family: var(--main-font);
-  color: var(--article-color);
+  color: var(--text-color-button);
   border-radius: .5em;
   padding: 1em;
   margin: 2em;
-
   z-index: 10000;
   bottom: 0;
   top: 80%;
   left: 50%;
   cursor: pointer;
-
   display: flex;
   align-items: center;
-
-
+  transition: .3s ease;
 }
 
-.pipe-container {
+/* button states */
+
+/* disabled */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(2):disabled,
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(1)[disabled]   
+{  
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  transition: .2s ease;
+}
+
+/* hover */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(2):hover,
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(1):hover 
+{
+  transform: scale(1.1);
+  transition: .3s ease;
+}
+
+/* active */
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(2):active,
+.container > section:first-child > section:nth-of-type(2) button:nth-of-type(1):active 
+{
+  border: 5px solid var(--article-color);
+  transition: .3s ease;
+}
+
+
+
+
+
+
+
+/* /////////////////////// */
+/* PIPES                  */
+/* //////////////////////*/
+
+/* pipe container */
+.container > section:first-child > section:nth-of-type(1){
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -222,21 +284,25 @@ body {
   transition: background-position 0.2s ease-in-out, left 0.2s ease-in-out;
 }
 
-
-.pipe {
+/* pipe */
+.container > section:first-child > section > section {
   width: 100px;
   height: 189px;
   position: relative;
   z-index: 1;
   cursor: pointer;
 }
-.pipe img:nth-of-type(1){
+
+/* pipe image 1 */
+.container > section:first-child > section > section img:nth-of-type(1) {
   width: 100px;
   height: 145px;
   position: relative;
   z-index: 1;
 }
-.pipe img:nth-of-type(2){
+
+/* pipe image 2 */
+.container > section:first-child > section > section img:nth-of-type(2) {
   width: 100px;
   height: 145px;
   position: absolute;
@@ -246,19 +312,16 @@ body {
   transform: translateY(32%);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-
-
 }
 
-
-.pipe img:nth-of-type(2).plantsUp {
+/* plant going up */
+.container > section:first-child > section > section img:nth-of-type(2).plantsUp {
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
 }
 
-/* sub mario */
-.pipe img:nth-of-type(3){
-
+/* Mario inside of pipe */
+.container > section:first-child > section > section img:nth-of-type(3) {
   width: 100px;
   height: 145px;
   position: absolute;
@@ -268,16 +331,18 @@ body {
   transform: translateY(32%);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+}
 
-
+/* mario goes up */
+.container > section:first-child > section > section img:nth-of-type(3).img_clicked {
+  transform: translateY(-96%);
 }
 
 /* article in pipe */
-.pipe article {
+.container > section:first-child > section > section article {
   max-width: 28em;
   width: 28em;
   background-color: var(--article-color);
-  /* color: black; */
   padding: 1em;
   position: relative;
   font-size: 12px;
@@ -285,13 +350,24 @@ body {
   transition: .3s ease;
 }
 
-
-.pipe article p{
+.container > section:first-child > section > section article p {
   margin: 0;
   margin-top: 2em;
 }
 
+.container > section:first-child > section > section p {
+  color: var(--article-text-color);
+  margin: 1em;
+  transform: translateY(-10%);
+  z-index: -5;
+  position: relative;
+}
 
+.container > section:first-child > section > section article h2 {
+  color: var(--text-color-light);
+}
+
+/* Moving article position */
 .infoUp{
   transform: translateY(-233%);
 }
@@ -306,7 +382,10 @@ body {
 }
 
 
-/* pixelate borders! */
+/* pixelate borders */
+/* source from generator: */
+/* https://pixelcorners.lukeb.co.uk/?radius=8&multiplier=4&border=1&border_width=1&border_color=#000000 */
+
 .pixel-corners,
 .pixel-corners--wrapper {
   clip-path: polygon(0px calc(100% - 20px),
@@ -469,10 +548,7 @@ body {
   margin: -4px;
 }
 
-/* source from generator: */
-/* https://pixelcorners.lukeb.co.uk/?radius=8&multiplier=4&border=1&border_width=1&border_color=#000000 */
-
-
+/* movement keyframes */
 @keyframes moveUpDown {
   0% {
     transform: translateY(1);
@@ -485,19 +561,16 @@ body {
   }
 }
 
-.pipe p{
-  color: var(--article-text-color);
-  margin: 1em;
-  transform: translateY(-10%);
-  z-index: -5;
-  position: relative;
-}
 
 
 
 
-/* clouds */
-.clouds {
+
+/* /////////////////////// */
+/* CLOUDS                 */
+/* //////////////////////*/
+
+.container > section:first-child > div:nth-of-type(1) {  
   background-image: url("../images/realclouds2.png");
   background-size: auto 100%;
   background-position: right;
@@ -509,6 +582,7 @@ body {
   animation: cloudsMove linear 130s infinite;
 }
 
+/* movement keyframes */
 @keyframes cloudsMove {
   from {
     background-position: 0 0;
@@ -518,26 +592,44 @@ body {
   }
 }
 
+/* /////////////////////// */
+/* SCOREBOARD             */
+/* //////////////////////*/
 
-/* scoreboard */
-      /* Hide the scoreboard initially */
-#scoreboard {
+/* Hide the scoreboard initially */
+.container section:first-child header section {
   display: none;
   position: absolute;
+  padding: 1em;
+  background-color: var(--transparant-bg) ;
+  color: var(--article-color);
+  border-radius: .5em;
+  margin: 0 1em;
 }
 
 
-.stage {
-  background-image: url("../images/mountainpng5.png");
-  background-repeat: repeat-x;
-  background-position: center bottom;
+
+
+
+
+
+/* /////////////////////// */
+/* MONEY RAIN             */
+/* //////////////////////*/
+
+.heart {
+  position: fixed;
+  top: -9vh;
+  transform: translateY(0);
+  transform: translateX(0);
+  animation: fall 3s linear;
+  font-size: 1.2rem;
+  z-index: 10000000000;
 }
 
-
-.img_clicked{
-  transform: translateY(-96%);
-}
-
-img.sub-mario_img.img_clicked{
-  transform: translateY(-96%);
+/* keyframes raining money */
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
 }
