@@ -13,7 +13,6 @@ const moveDistance = -100;
 oppositeButton.disabled = true;
 
 myButton.addEventListener("click", () => {
-  console.log("check");
   myDiv.classList.add("face-right");
   setTimeout(() => {
     myDiv.classList.remove("face-right");

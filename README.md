@@ -28,7 +28,7 @@ Mijn startniveau is: Rood
   ### De eerste versie/schets:
   <!-- <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets"> -->
   Mijn plan is om een tijdlijn te maken over Mario. De user kan naar links en rechts bewegen met de Mario character om zo langs de buizen te lopen. Vervolgens kan de user op de buizen klikken en komt er een Mario uit de buis die uit dat specifieke jaartal komt.
-  <img src="readme-images/readme_img1" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img1.png" width="375px" alt="eerste versie/schets">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -51,13 +51,13 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ben inspiratie op gaan doen op internet om zo op ideeën te komen en heb vervolgens mijn ideeën op het mirobord geplaatst
-  <img src="readme-images/readme_img2" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img2.png" width="375px" alt="eerste versie/schets">
 
 
 
   ### Bevinding 2:
   Ik ben begonnen met de basis van mijn concept uit te werken in codepen. Ik wilde eerst beginnen met het correct positioneren van de character en de buizen op de grond.
-  <img src="readme-images/readme_img2" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img2.png" width="375px" alt="eerste versie/schets">
 
 
   #### oplossing:
@@ -78,7 +78,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ben gaan googlen naar hoe dit precies mogelijk zou kunnen zijn, en ik vond een aantal tutorials over hoe je met een sprite afbeelding je character een animatie kan geven. Een van de voorbeelden over hoe dit te werk zou kunnen gaan is: https://www.youtube.com/watch?v=ekI7vjkFrGA&t=1173s&ab_channel=DrewConley
-  <img src="readme-images/readme_img3" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img3.png" width="375px" alt="eerste versie/schets">
 
 
 
@@ -87,7 +87,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga meerdere states toevoegen aan de buttons zodat deze nog semantischer worden.
-  <img src="readme-images/readme_img3" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img3.png" width="375px" alt="eerste versie/schets">
 
 
 </details>
@@ -105,7 +105,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga een close button toevoegen op de info modal zodat het voor de user handiger en duidelijker is dat deze modal weggeklikt kan worden.
-  <img src="readme-images/closebutton_img" width="375px" alt="close button added">
+  <img src="readme-images/closebutton_img.png" width="375px" alt="close button added">
 
 
   ### Bevinding 2:
@@ -113,7 +113,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga planten toevoegen die uit de buizen komen, waar de user vervolgens op kan klikken om punten te verdienen. Als de user een X aantal punten heeft komt er geld uit de lucht vallen.
- <img src="readme-images/plantup_img" width="375px" alt="plant out of tube">
+ <img src="readme-images/plantup_img.png" width="375px" alt="plant out of tube">
 
 
   ### Bevinding 3:
@@ -121,7 +121,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga een disabled state toevoegen aan de knop om naar links te lopen zodat deze pas beschikbaar wordt zodra de gebruiker eerst naar rechts heeft gelopen.
-  <img src="readme-images/disabledbutton_img" width="375px" alt="image of disabled button">
+  <img src="readme-images/disabledbutton_img.png" width="375px" alt="image of disabled button">
 
 
 
@@ -131,7 +131,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga alle kleuren in variabelen zetten binnen de :root in CSS.
-  <img src="readme-images/varsroot_img" width="375px" alt="root with variables inside of it">
+  <img src="readme-images/varsroot_img.png" width="375px" alt="root with variables inside of it">
 
 
 
@@ -140,7 +140,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga ervoor zorgen dat als de info modals omhoog zijn, de planten niet meer uit de buizen komen, maar zodra de modals weer naar beneden zijn dat de planten weer verder gaan met bewegen.
-  <img src="readme-images/noplantsup_img" width="375px" alt="no plants out of tubes">
+  <img src="readme-images/noplantsup_img.png" width="375px" alt="no plants out of tubes">
 
 
 
@@ -157,21 +157,21 @@ Mijn startniveau is: Rood
   
   ### Bevinding 1:
   Ik heb nu heel veel gebruik gemaakt van classes en ID's, dit is semantisch niet correct.
-  <img src="readme-images/muchclasses_img" width="375px" alt="Image of file with a lot of classes">
+  <img src="readme-images/muchclasses_img.png" width="375px" alt="Image of file with a lot of classes">
 
   #### oplossing:
   Ik ga in de HTML en CSS alle overbodige classes en ID's weghalen en alles aanspreken door middel van selectors.
-  <img src="readme-images/lessclasses_img" width="375px" alt="Image of file with less classes">
+  <img src="readme-images/lessclasses_img.png" width="375px" alt="Image of file with less classes">
 
 
 
   ### Bevinding 2:
   Ik heb nog geen ALT texten bij de images toegevoegd, dit is semantisch niet goed.
-  <img src="readme-images/noalttexts_img" width="375px" alt="images with no alt texts">
+  <img src="readme-images/noalttexts_img.png" width="375px" alt="images with no alt texts">
 
   #### oplossing:
   Ik ga aan elke image een alt text toevoegen om zo de HTML nog semantischer en accesible te maken.
-  <img src="readme-images/alttexts_img" width="375px" alt="images with alt texts">
+  <img src="readme-images/alttexts_img.png" width="375px" alt="images with alt texts">
 
 
 
@@ -180,7 +180,7 @@ Mijn startniveau is: Rood
 
   #### oplossing:
   Ik ga mijn CSS bestand opschonen en alles ordenen in categorieën.
-  <img src="readme-images/ordercss_img" width="375px" alt="ordered css file">
+  <img src="readme-images/ordercss_img.png" width="375px" alt="ordered css file">
 
 
 
@@ -189,7 +189,7 @@ Mijn startniveau is: Rood
   
   #### oplossing:
   Ik ga geluidseffecten toevoegen voor tijdens het lopen van de character en ook voor wanneer de user op een buis klikt.
-  <img src="readme-images/jsfilesound_img" width="375px" alt="js code about effects">
+  <img src="readme-images/jsfilesound_img.png" width="375px" alt="js code about effects">
 
 
 
@@ -198,7 +198,7 @@ Mijn startniveau is: Rood
   
   #### oplossing:
   Ik ga een darkmode toevoegen in de CSS zodat als de user een voorkeur heeft voor darkmode, dit ook mogelijk is. Dit zal redelijk makkelijk gaan aangezien ik alle kleuren al in variabelen heb gezet.
-  <img src="readme-images/darkmode_img" width="375px" alt="user preference darkmode in css">
+  <img src="readme-images/darkmode_img.png" width="375px" alt="user preference darkmode in css">
 
 </details>
 
@@ -211,19 +211,23 @@ Mijn startniveau is: Rood
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/finalontwerp1_img.png" width="375px" alt="final ontwerp 1">
+  <img src="readme-images/finalontwerp2_img.png" width="375px" alt="final ontwerp 2">
+  <img src="readme-images/finalontwerp3_img.png" width="375px" alt="final ontwerp 3">
+  <img src="readme-images/finalontwerp4_img.png" width="375px" alt="final ontwerp 4">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Ik ben mij verder gaan verdiepen in HTML en CSS, ik begrijp nu beter hoe je in plaats van classes en ID's ook CSS selectors kan gebruiken. Verder heb ik door middel van Javascript de website heel interactief gemaakt, ik wilde graag dat de gebruiker heen en weer kon lopen net als in een echte mario game en dit is dan ook gelukt. Soms liep ik een beetje vast op de Javascript maar gelukkig ben ik er uiteindelijk toch uitgekomen en is alles naar mijn wens verlopen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/selectorscss.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Ik vond de Javascript voor alle interactieve elementen nog redelijk lastig, maar gelukkig is het wel allemaal gelukt. Het liefst had ik de website nog beter in responsiveness gemaakt maar hier ben ik helaas niet volledig aan toegekomen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/responsive_img.png" width="375px" alt="bummer">
 </details>
 
 
