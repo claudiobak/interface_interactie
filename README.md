@@ -83,7 +83,7 @@ Mijn startniveau is: Rood
   #### oplossing:
   Ik ben gaan googlen naar hoe dit precies mogelijk zou kunnen zijn, en ik vond een aantal tutorials over hoe je met een sprite afbeelding je character een animatie kan geven. Een van de voorbeelden over hoe dit te werk zou kunnen gaan is: https://www.youtube.com/watch?v=ekI7vjkFrGA&t=1173s&ab_channel=DrewConley
 
-  <img src="readme-images/readme_img3.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/readme_img3.png" width="375px" alt="character sprite movement">
 
 
 
@@ -93,7 +93,7 @@ Mijn startniveau is: Rood
   #### oplossing:
   Ik ga meerdere states toevoegen aan de buttons zodat deze nog semantischer worden.
 
-  <img src="readme-images/butttonstates_img.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/buttonstates_img.png" width="375px" alt="button states">
 
 
 </details>
