@@ -93,7 +93,7 @@ Mijn startniveau is: Rood
   #### oplossing:
   Ik ga meerdere states toevoegen aan de buttons zodat deze nog semantischer worden.
 
-  <img src="readme-images/buttonstaes_img.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/buttonstates_img.png" width="375px" alt="eerste versie/schets">
 
 
 </details>
